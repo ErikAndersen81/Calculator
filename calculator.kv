@@ -1,0 +1,78 @@
+#:kivy 1.9.0
+
+<Calculator>:
+    Label:
+        id:'display'
+        text: root.display_str
+        size:(root.width,root.height*0.2)
+        top:root.top
+        right:root.right
+    GridLayout:
+        size:(root.width, root.height*0.8)
+        right:root.right
+        cols: 4
+        Button:
+            text:'1'
+            id:'1'
+            on_press:root.number_pressed(1)
+        Button:
+            text:'2'
+            id:'2'
+            on_press:root.number_pressed(2)
+        Button:
+            text:'3'
+            id:'3'
+            on_press:root.number_pressed(3)
+        Button:         
+            text:'ce'
+            id:'ce'
+            on_press: root.clear()
+        Button:
+            text:'4'
+            id:'4'
+            on_press:root.number_pressed(4)
+        Button:
+            text:'5'
+            id:'5'
+            on_press:root.number_pressed(5)
+        Button:
+            text:'6'
+            id:'6'
+            on_press:root.number_pressed(6)
+        Button:
+            text:'/'
+            id:'/'
+            on_press: root.operator_pressed('/')
+        Button:
+            text:'7'
+            id:'7'
+            on_press:root.number_pressed(7)
+        Button:
+            text:'8'
+            id:'8'
+            on_press:root.number_pressed(8)
+        Button:
+            text:'9'
+            id:'9'
+            on_press:root.number_pressed(9)
+        Button:
+            text:'*'
+            id:'*'
+            on_press: root.operator_pressed('*')
+        Button:
+            text:'+'
+            id:'+'
+            on_press: root.operator_pressed('+')
+        Button:
+            text:'0'
+            id:'0'
+            on_press:root.number_pressed(0)
+        Button:
+            text:'-'
+            id:'-'
+            on_press: root.operator_pressed('-')
+        Button:
+            text:'='
+            id:'='
+            on_press: root.evaluate_expression()
+        
