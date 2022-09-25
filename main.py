@@ -4,6 +4,8 @@ from kivy.core.window import Window
 from kivy.uix.widget import Widget
 from kivy.properties import StringProperty
 
+#Comment
+
 class CalculatorApp(App):
     def build(self):
         return Calculator(size=Window.size)
