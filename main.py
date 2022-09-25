@@ -2,7 +2,7 @@ import operator
 from kivy.app import App
 from kivy.core.window import Window
 from kivy.uix.widget import Widget
-from kivy.properties import NumericProperty, StringProperty
+from kivy.properties import StringProperty
 
 class CalculatorApp(App):
     def build(self):
@@ -26,8 +26,7 @@ class Calculator(Widget):
                     break
             self.display_str+=operator
         else:
-            self.display_str=self.display_str[:-1]
-            self.display_str+=val
+            self.display_str=self.display_str[:-1]            
             
     def evaluate_expression(self):
         ops = {'-':operator.sub,'+':operator.add,'*':operator.mul,'/':operator.truediv}
